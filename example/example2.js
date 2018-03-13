@@ -133,10 +133,10 @@ rectangle3 = {
     }
 };
 
-jsAnimator.add(rectangle0,{removeOnStop : false});
+jsAnimator.add(rectangle0);
 jsAnimator.add(rectangle1);
 jsAnimator.add(rectangle2);
-jsAnimator.add(rectangle3,{removeOnStop : true});
+jsAnimator.add(rectangle3);
 
 jsAnimator.animationStart();
 
