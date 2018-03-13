@@ -31,13 +31,10 @@ let jsAnimator;
         if(!obj.fn_draw || typeof obj.fn_draw !== 'function'){
             obj.fn_draw = function(){};
         }
-        let property = {state: _state.QUEUED,
-                        removeOnStop: true
-                        };
-        if (prop.hasOwnProperty("removeOnStop") &&
-            (typeof prop["removeOnStop"]).toLowerCase() === "boolean"){
-            property.removeOnStop = prop["removeOnStop"];
-        }
+        let property = {
+            state: _state.QUEUED
+        };
+
         queue.push({element:obj, prop: property});
     };
 
@@ -81,9 +78,7 @@ let jsAnimator;
                 e.fn_draw.apply(e);
                 if(e.fn_stop.apply(e)){
                     queue[i].prop.state = _state.ANIM_END;
-                    if(queue[i].prop.removeOnStop){
-                        queue.splice(i,1);
-                    }
+                    queue.splice(i,1);
                 }
                 cont = true;
             }
