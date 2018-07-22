@@ -27,7 +27,7 @@
 /**
  * number of balls
  */
-let n = 2000;
+let n = 4000;
 
 /**
  * create base class for balls to animate

@@ -1,4 +1,4 @@
-# What is jsAnimator
+# What jsAnimator is
 
 JsAniator is a javascript library to make animation, it can handle both html element, like divs, and canvases.
 JsAnimator is lightweight and does not use timers, it only use requestAnimationFrame call for handle animation.
